@@ -11,7 +11,7 @@ from github import Github
 # ==========================================
 GITHUB_TOKEN = os.environ.get("GH_PERSONAL_TOKEN")
 GITHUB_REPO = "Curarpikt0000/cme-data-archive"
-SCRAPER_API_KEY = "你的_SCRAPERAPI_KEY"  # 记得替换你的 Key
+SCRAPER_API_KEY = os.environ.get("SCRAPER_API_KEY", "0434276aa91c62e0340dcd30819f3fbf") # 记得替换你的 Key
 
 DISPLAY_DATE = (datetime.datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
 GITHUB_PATH_PREFIX = f"data/{DISPLAY_DATE}/"
