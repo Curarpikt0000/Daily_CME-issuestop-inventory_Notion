@@ -29,6 +29,7 @@ jobs:
       - name: Step 1 - Download CME Files
         env:
           GH_PERSONAL_TOKEN: ${{ secrets.GH_PERSONAL_TOKEN }}
+          SCRAPER_API_KEY: ${{ secrets.SCRAPER_API_KEY }}  # ✅ 已添加：注入 Scraper API 密钥
         run: python cme_bot.py
 
       - name: Step 2 - Sync Links to Notion
